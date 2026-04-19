@@ -18,110 +18,112 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Light theme override
+    <!-- Light theme
     ================================================== -->
     <style>
         /* =====================================================
-         * LIGHT THEME — ivory · forest · sage · terracotta
-         * Refined, gallery-grade cafe palette.
+         * CAFE LOUNGE — linen · forest · sage · warm sand
          *
-         *  Bg         #f6f2ea   soft ivory
-         *  Headings   #1f2a24   deep forest (crisp, not muddy)
-         *  Sage       #6b8e7a   primary accent
-         *  Terracotta #c47a5f   warm secondary highlight
+         *  Bg      #F2EEE8   warm linen
+         *  Heads   #2F3A2F   deep forest  (= sage-900)
+         *  Body    #5F6F64   sage-grey
+         *  Sage    #A3B18A   primary accent  (~400)
+         *  Warm    #DDB892   used sparingly — phone CTA,
+         *                    section counters, menu labels,
+         *                    prices, active-tab strip, swiper dot
          * ===================================================== */
 
         :root {
-            /* sage green (primary) */
-            --color-1-50  : #f2f5f3;
-            --color-1-100 : #dfe8e2;
-            --color-1-200 : #bfd1c6;
-            --color-1-300 : #9ab5a4;
-            --color-1-400 : #7ba088;
-            --color-1-500 : #6b8e7a;
-            --color-1-600 : #557263;
-            --color-1-700 : #445b4f;
-            --color-1-800 : #364940;
-            --color-1-900 : #2b3a33;
-            --color-1-950 : #17201c;
-            --color-1     : var(--color-1-500);
+            /* SAGE (primary) — #A3B18A anchors at ~400 */
+            --color-1-50 : #f4f6f1;
+            --color-1-100: #e4eadd;
+            --color-1-200: #c8d5bc;
+            --color-1-300: #b3c1a0;
+            --color-1-400: #a3b18a;
+            --color-1-500: #8c9b74;
+            --color-1-600: #717d5c;
+            --color-1-700: #5a6449;
+            --color-1-800: #464e39;
+            --color-1-900: #2f3a2f;
+            --color-1-950: #192110;
+            --color-1    : var(--color-1-400);
 
-            /* terracotta / soft clay (secondary) */
-            --color-2-50  : #fbf4f0;
-            --color-2-100 : #f6e4da;
-            --color-2-200 : #eec7b5;
-            --color-2-300 : #e3a589;
-            --color-2-400 : #d58a6a;
-            --color-2-500 : #c47a5f;
-            --color-2-600 : #a25f46;
-            --color-2-700 : #824a37;
-            --color-2-800 : #663b2d;
-            --color-2-900 : #4f2e25;
-            --color-2-950 : #2a1813;
-            --color-2     : var(--color-2-500);
+            /* WARM SAND (secondary) — #DDB892 anchors at ~400 */
+            --color-2-50 : #fdf8f2;
+            --color-2-100: #f9eddb;
+            --color-2-200: #f2d9b6;
+            --color-2-300: #e8c390;
+            --color-2-400: #ddb892;
+            --color-2-500: #cd9f6a;
+            --color-2-600: #b88248;
+            --color-2-700: #96673a;
+            --color-2-800: #785230;
+            --color-2-900: #5c3f26;
+            --color-2-950: #301f0d;
+            --color-2    : var(--color-2-400);
 
-            /* ivory surfaces & warm neutrals */
-            --color-bg              : #f6f2ea;
-            --color-bg-inverse      : #1f2a24;
+            /* surfaces */
+            --color-bg              : #F2EEE8;
+            --color-bg-inverse      : #2f3a2f;
             --color-bg-primary      : var(--color-1-600);
             --color-bg-primary-light: var(--color-1-500);
             --color-bg-primary-dark : var(--color-1-700);
-            --color-bg-secondary    : var(--color-2-500);
-            --color-bg-secondary-light: var(--color-2-400);
-            --color-bg-secondary-dark : var(--color-2-600);
+            --color-bg-secondary    : var(--color-2-400);
+            --color-bg-secondary-light: var(--color-2-300);
+            --color-bg-secondary-dark : var(--color-2-500);
             --color-bg-accent       : var(--color-bg-primary);
             --color-bg-accent-light : var(--color-bg-primary-light);
             --color-bg-accent-dark  : var(--color-bg-primary-dark);
-            --color-bg-neutral      : #eee9de;
-            --color-bg-neutral-light: #f0ebe0;
-            --color-bg-neutral-dark : #e3dccd;
-            --color-border          : #d8d0be;
+            --color-bg-neutral      : #E8E3DB;
+            --color-bg-neutral-light: #EDE9E2;
+            --color-bg-neutral-dark : #DDD8CF;
+            --color-border          : #CEC8BE;
 
-            /* type — deep forest, refined grays */
-            --color-text       : #3d4a42;
-            --color-text-bold  : #1f2a24;
-            --color-text-light : #7a847c;
-            --color-headings   : #1f2a24;
-            --color-placeholder: #a0a99e;
+            /* type */
+            --color-text       : #5F6F64;
+            --color-text-bold  : #2F3A2F;
+            --color-text-light : #8A9890;
+            --color-headings   : #2F3A2F;
+            --color-placeholder: #A8B3AB;
 
-            --color-white     : #f6f2ea;
-            --color-black     : #15201a;
+            --color-white     : #F2EEE8;
+            --color-black     : #1a2218;
             --color-pure-white: #ffffff;
             --color-pure-black: #000000;
 
             /* buttons */
-            --color-btn                   : #e3dccd;
-            --color-btn-text              : #1f2a24;
-            --color-btn-hover             : #d6ccba;
-            --color-btn-hover-text        : #1f2a24;
+            --color-btn                   : #DDD8CF;
+            --color-btn-text              : #2F3A2F;
+            --color-btn-hover             : #CEC8BE;
+            --color-btn-hover-text        : #2F3A2F;
             --color-btn-primary           : var(--color-bg-accent);
-            --color-btn-primary-text      : #f6f2ea;
+            --color-btn-primary-text      : #F2EEE8;
             --color-btn-primary-hover     : var(--color-bg-accent-dark);
-            --color-btn-primary-hover-text: #f6f2ea;
-            --color-btn-ghost             : var(--color-2-500);
-            --color-btn-ghost-text        : var(--color-2-500);
+            --color-btn-primary-hover-text: #F2EEE8;
+            --color-btn-ghost             : var(--color-2-400);
+            --color-btn-ghost-text        : var(--color-2-700);
             --color-btn-ghost-hover       : var(--color-2-500);
-            --color-btn-ghost-hover-text  : #f6f2ea;
+            --color-btn-ghost-hover-text  : #F2EEE8;
 
             /* links */
-            --color-link       : var(--color-1-600);
-            --color-link-hover : var(--color-2-500);
-            --color-link-active: var(--color-2-500);
+            --color-link       : var(--color-1-700);
+            --color-link-hover : var(--color-2-600);
+            --color-link-active: var(--color-2-600);
 
             /* preloader */
-            --color-preloader-bg: #f6f2ea;
-            --color-loader      : #c0b9a5;
-            --color-loader-light: var(--color-1-600);
+            --color-preloader-bg: #F2EEE8;
+            --color-loader      : #C0BAB0;
+            --color-loader-light: var(--color-1-500);
 
-            /* shadows — cool forest tint */
-            --shadow-color : 150, 15%, 15%;
+            /* shadows */
+            --shadow-color: 150, 12%, 12%;
         }
 
-        /* soft ambient wash so the ivory doesn't feel flat */
+        /* linen base with barely-there sage + sand whispers */
         body {
             background:
-                radial-gradient(ellipse 60% 50% at 15% 0%, rgba(107, 142, 122, 0.08), transparent 70%),
-                radial-gradient(ellipse 50% 40% at 90% 100%, rgba(196, 122, 95, 0.06), transparent 70%),
+                radial-gradient(ellipse 60% 50% at 15% 0%, rgba(163, 177, 138, 0.07), transparent 70%),
+                radial-gradient(ellipse 50% 40% at 90% 100%, rgba(221, 184, 146, 0.06), transparent 70%),
                 var(--color-bg);
         }
 
@@ -129,24 +131,19 @@
         .header-nav__links a { color: var(--color-text-light); }
         .header-nav__links a:focus,
         .header-nav__links a:hover,
-        .header-nav__links .current a { color: var(--color-1-700); }
+        .header-nav__links .current a { color: var(--color-1-900); }
 
-        /* hero headline & overline */
+        /* hero */
         .intro-header__big-type { color: var(--color-headings); }
-        .intro-header__overline {
-            color: var(--color-2-600);
-            letter-spacing: 0.15em;
-        }
+        .intro-header__overline { color: var(--color-2-600); letter-spacing: 0.15em; }
 
-        /* mobile hamburger: forest lines on ivory */
+        /* hamburger */
         .header-menu-toggle span,
         .header-menu-toggle.is-clicked span::before,
-        .header-menu-toggle.is-clicked span::after {
-            background-color: var(--color-1-800);
-        }
+        .header-menu-toggle.is-clicked span::after { background-color: var(--color-1-800); }
         .header-menu-toggle.is-clicked span { background-color: transparent; }
 
-        /* phone CTA — terracotta tint */
+        /* phone CTA — warm sand tint (warm earns its place here: friendly CTA) */
         .header-contact__num.btn {
             background-color: var(--color-2-100);
             color: var(--color-2-700);
@@ -160,58 +157,50 @@
         }
         .header-contact__num svg path { stroke: currentColor; }
 
-        /* section numbers */
+        /* section counter numbers — warm (one subtle warm use per section) */
         .section-header::before { color: var(--color-2-600); }
 
-        /* =========================================================
-         * MENU — warm, gallery-grade treatment
-         *  · deep espresso active tab (not cold sage)
-         *  · warm cream row alternation
-         *  · terracotta counters, italic serif category labels
-         *  · prices feel like a proper price tag
-         * ========================================================= */
+        /* ——— MENU SECTION ——— */
 
-        /* tab list — warm borders, warm counter numbers */
-        .tab-nav__list { border-top-color: rgba(130, 74, 55, 0.18); }
-        .tab-nav__list li { border-bottom-color: rgba(130, 74, 55, 0.18); }
+        /* tab list — sage-family borders */
+        .tab-nav__list { border-top-color: rgba(47, 58, 47, 0.13); }
+        .tab-nav__list li { border-bottom-color: rgba(47, 58, 47, 0.13); }
 
+        /* default link */
         .tab-nav__list a {
-            color: var(--color-2-900);
+            color: var(--color-text);
             transition: background-color 0.25s ease, color 0.25s ease;
         }
         .tab-nav__list a::before {
-            color: var(--color-2-500);
+            color: var(--color-1-500);
             font-weight: 500;
             letter-spacing: 0.05em;
         }
-        .tab-nav__list a svg path { fill: var(--color-2-700); }
+        .tab-nav__list a svg path { fill: var(--color-1-600); }
 
-        /* hover — soft warm cream wash */
+        /* hover — very light sage wash */
         .tab-nav__list a:hover,
         .tab-nav__list a:focus {
-            background-color: var(--color-2-50);
-            color: var(--color-2-900);
+            background-color: var(--color-1-50);
+            color: var(--color-1-900);
         }
         .tab-nav__list a:hover::before,
-        .tab-nav__list a:focus::before { color: var(--color-2-700); }
+        .tab-nav__list a:focus::before { color: var(--color-1-600); }
         .tab-nav__list a:hover svg path,
-        .tab-nav__list a:focus svg path { fill: var(--color-2-700); }
+        .tab-nav__list a:focus svg path { fill: var(--color-1-700); }
 
-        /* active — rich espresso with cream text, warm accent border */
-        .tab-nav__list li[data-tab-active] {
-            border-bottom-color: var(--color-2-600);
-        }
+        /* active — forest/headings color, linen text
+           the 3px warm strip is the only warm touch in the tabs */
+        .tab-nav__list li[data-tab-active] { border-bottom-color: var(--color-1-600); }
         .tab-nav__list li[data-tab-active] a {
-            background-color: #3b2a20;
-            color: #f6ecdf;
-            box-shadow: inset 3px 0 0 0 var(--color-2-500);
+            background-color: var(--color-1-900);
+            color: #F2EEE8;
+            box-shadow: inset 3px 0 0 0 var(--color-2-400);
         }
-        .tab-nav__list li[data-tab-active] a::before {
-            color: var(--color-2-300);
-        }
-        .tab-nav__list li[data-tab-active] a svg path { fill: var(--color-2-200); }
+        .tab-nav__list li[data-tab-active] a::before { color: var(--color-1-300); }
+        .tab-nav__list li[data-tab-active] a svg path { fill: var(--color-1-200); }
 
-        /* category label — italic serif, terracotta, with a longer rule */
+        /* category label — italic serif, warm sand (food context earns it) */
         .menu-block__cat-name {
             font-family: var(--type-2, Georgia, serif);
             font-style: italic;
@@ -228,29 +217,21 @@
             height: 1.5px;
         }
 
-        /* menu rows — warm cream alternation, subtle hover lift */
-        .menu-list__item {
-            transition: background-color 0.25s ease, transform 0.25s ease;
-        }
-        .menu-list__item:nth-child(odd) {
-            background-color: #f1e8d6;
-        }
-        .menu-list__item:nth-child(even) {
-            background-color: #faf5ec;
-        }
-        .menu-list__item:hover {
-            background-color: #ebddc4;
-        }
+        /* menu rows */
+        .menu-list__item { transition: background-color 0.25s ease; }
+        .menu-list__item:nth-child(odd)  { background-color: #EAE3D6; }
+        .menu-list__item:nth-child(even) { background-color: #F0ECE5; }
+        .menu-list__item:hover           { background-color: #E0D8C8; }
 
-        /* dish title — deep espresso for strong hierarchy */
+        /* dish title — deep forest for hierarchy */
         .menu-list__item h4 {
-            color: #2a1813;
+            color: var(--color-1-900);
             font-weight: 500;
             letter-spacing: 0.005em;
         }
-        .menu-list__item p { color: #7a5c4a; }
+        .menu-list__item p { color: var(--color-text); }
 
-        /* price — warm terracotta, slightly larger & refined */
+        /* price — warm sand (appetite appeal, one of the best uses of warm) */
         .menu-list__item-price {
             color: var(--color-2-700);
             font-family: var(--type-2, Georgia, serif);
@@ -259,10 +240,7 @@
             letter-spacing: 0.01em;
             white-space: nowrap;
         }
-        .menu-list__item-price span {
-            color: var(--color-2-500);
-            font-weight: 400;
-        }
+        .menu-list__item-price span { color: var(--color-2-500); font-weight: 400; }
 
         /* intro social strip */
         .intro-block-content__social a {
@@ -270,18 +248,18 @@
             letter-spacing: 0.2em;
             transition: color 0.25s ease;
         }
-        .intro-block-content__social a:hover { color: var(--color-2-600); }
+        .intro-block-content__social a:hover { color: var(--color-1-700); }
 
         /* footer social icons */
         .social-list svg path,
-        .social-list svg circle { fill: rgba(61, 74, 66, 0.5); }
+        .social-list svg circle { fill: rgba(95, 111, 100, 0.45); }
         .social-list a:focus svg path,
         .social-list a:focus svg circle,
         .social-list a:hover svg path,
-        .social-list a:hover svg circle { fill: var(--color-2-600); }
+        .social-list a:hover svg circle { fill: var(--color-1-600); }
 
-        /* swiper dots */
-        .swiper-container .swiper-pagination-bullet { background: #c0b9a5; opacity: 1; }
+        /* swiper — inactive sage tint, active warm dot (small delight) */
+        .swiper-container .swiper-pagination-bullet { background: #b8c4ab; opacity: 1; }
         .swiper-container .swiper-pagination-bullet-active { background: var(--color-2-500); opacity: 1; }
 
         /* testimonials */
@@ -289,37 +267,33 @@
         .testimonials-slider__avatar { background-color: var(--color-bg-neutral-dark); }
 
         /* footer */
-        .s-footer h6 {
-            color: var(--color-1-700);
-            letter-spacing: 0.08em;
-        }
+        .s-footer h6 { color: var(--color-1-700); letter-spacing: 0.08em; }
         .s-footer a { color: var(--color-text); }
-        .s-footer a:focus,
-        .s-footer a:hover { color: var(--color-2-600); }
+        .s-footer a:focus, .s-footer a:hover { color: var(--color-1-700); }
         .s-footer .link-list a { color: var(--color-text-light); }
         .s-footer .link-list a:focus,
-        .s-footer .link-list a:hover { color: var(--color-2-600); }
+        .s-footer .link-list a:hover { color: var(--color-1-700); }
         .s-footer__top::before,
-        .s-footer__bottom::before { background-color: rgba(31, 42, 36, 0.10); }
+        .s-footer__bottom::before { background-color: rgba(47, 58, 47, 0.10); }
 
-        /* newsletter card */
+        /* newsletter card — light sage tint */
         .footer-newsletter {
-            background-color: #eef1ec;
+            background-color: #ebf0e5;
             border-color: var(--color-1-200);
         }
         .footer-newsletter input[type=email] {
-            background-color: #f6f2ea;
+            background-color: #F2EEE8;
             color: var(--color-text);
         }
         .footer-newsletter input[type=email]::placeholder { color: var(--color-placeholder); }
 
         /* back-to-top */
         .ss-go-top a:hover svg path,
-        .ss-go-top a:focus svg path { fill: var(--color-2-600); }
+        .ss-go-top a:focus svg path { fill: var(--color-1-600); }
 
-        /* gallery overlay — keep darker for photo legibility */
+        /* gallery overlay */
         .gallery-items__item::after {
-            background: linear-gradient(0deg, rgba(20, 28, 22, 0.45) 12%, rgba(20, 28, 22, 0) 100%);
+            background: linear-gradient(0deg, rgba(18, 26, 18, 0.45) 12%, rgba(18, 26, 18, 0) 100%);
         }
 
         /* scroll-down arrow */
