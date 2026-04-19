@@ -72,14 +72,39 @@
         }
         .header-contact__num svg path { stroke: currentColor; }
         .section-header::before { color: var(--color-2-600); }
+        .tab-nav__list { border-top-color: rgba(130,74,55,.18); }
+        .tab-nav__list li { border-bottom-color: rgba(130,74,55,.18); }
+        .tab-nav__list a { color: var(--color-2-900); transition: background-color .25s ease, color .25s ease; }
+        .tab-nav__list a::before { color: var(--color-2-500); font-weight: 500; letter-spacing: .05em; }
+        .tab-nav__list a svg path { fill: var(--color-2-700); }
         .tab-nav__list a:hover, .tab-nav__list a:focus {
-            background-color: var(--color-1-50); color: var(--color-1-800);
+            background-color: var(--color-2-50); color: var(--color-2-900);
         }
-        .tab-nav__list li[data-tab-active] a { background-color: var(--color-1-600); color: #f6f2ea; }
-        .tab-nav__list li[data-tab-active] a::before { color: rgba(246,242,234,.7); }
-        .tab-nav__list li[data-tab-active] a svg path { fill: #f6f2ea; }
-        .menu-list__item:nth-child(odd) { background-color: var(--color-1-50); }
-        .menu-list__item-price { color: var(--color-2-700); }
+        .tab-nav__list a:hover::before, .tab-nav__list a:focus::before { color: var(--color-2-700); }
+        .tab-nav__list a:hover svg path, .tab-nav__list a:focus svg path { fill: var(--color-2-700); }
+        .tab-nav__list li[data-tab-active] { border-bottom-color: var(--color-2-600); }
+        .tab-nav__list li[data-tab-active] a {
+            background-color: #3b2a20; color: #f6ecdf; box-shadow: inset 3px 0 0 0 var(--color-2-500);
+        }
+        .tab-nav__list li[data-tab-active] a::before { color: var(--color-2-300); }
+        .tab-nav__list li[data-tab-active] a svg path { fill: var(--color-2-200); }
+        .menu-block__cat-name {
+            font-family: var(--type-2, Georgia, serif); font-style: italic; font-weight: 400;
+            color: var(--color-2-700); letter-spacing: .02em; text-transform: none;
+            font-size: var(--text-md); padding-left: var(--vspace-1_5);
+        }
+        .menu-block__cat-name::before { width: var(--vspace-1); background-color: var(--color-2-500); height: 1.5px; }
+        .menu-list__item { transition: background-color .25s ease, transform .25s ease; }
+        .menu-list__item:nth-child(odd) { background-color: #f1e8d6; }
+        .menu-list__item:nth-child(even) { background-color: #faf5ec; }
+        .menu-list__item:hover { background-color: #ebddc4; }
+        .menu-list__item h4 { color: #2a1813; font-weight: 500; letter-spacing: .005em; }
+        .menu-list__item p { color: #7a5c4a; }
+        .menu-list__item-price {
+            color: var(--color-2-700); font-family: var(--type-2, Georgia, serif);
+            font-weight: 500; font-size: 1.15em; letter-spacing: .01em; white-space: nowrap;
+        }
+        .menu-list__item-price span { color: var(--color-2-500); font-weight: 400; }
         .intro-block-content__social a {
             color: var(--color-text-light); letter-spacing: 0.2em; transition: color .25s ease;
         }

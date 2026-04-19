@@ -163,22 +163,106 @@
         /* section numbers */
         .section-header::before { color: var(--color-2-600); }
 
-        /* menu tabs */
+        /* =========================================================
+         * MENU — warm, gallery-grade treatment
+         *  · deep espresso active tab (not cold sage)
+         *  · warm cream row alternation
+         *  · terracotta counters, italic serif category labels
+         *  · prices feel like a proper price tag
+         * ========================================================= */
+
+        /* tab list — warm borders, warm counter numbers */
+        .tab-nav__list { border-top-color: rgba(130, 74, 55, 0.18); }
+        .tab-nav__list li { border-bottom-color: rgba(130, 74, 55, 0.18); }
+
+        .tab-nav__list a {
+            color: var(--color-2-900);
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+        .tab-nav__list a::before {
+            color: var(--color-2-500);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+        .tab-nav__list a svg path { fill: var(--color-2-700); }
+
+        /* hover — soft warm cream wash */
         .tab-nav__list a:hover,
         .tab-nav__list a:focus {
-            background-color: var(--color-1-50);
-            color: var(--color-1-800);
+            background-color: var(--color-2-50);
+            color: var(--color-2-900);
+        }
+        .tab-nav__list a:hover::before,
+        .tab-nav__list a:focus::before { color: var(--color-2-700); }
+        .tab-nav__list a:hover svg path,
+        .tab-nav__list a:focus svg path { fill: var(--color-2-700); }
+
+        /* active — rich espresso with cream text, warm accent border */
+        .tab-nav__list li[data-tab-active] {
+            border-bottom-color: var(--color-2-600);
         }
         .tab-nav__list li[data-tab-active] a {
-            background-color: var(--color-1-600);
-            color: #f6f2ea;
+            background-color: #3b2a20;
+            color: #f6ecdf;
+            box-shadow: inset 3px 0 0 0 var(--color-2-500);
         }
-        .tab-nav__list li[data-tab-active] a::before { color: rgba(246, 242, 234, 0.7); }
-        .tab-nav__list li[data-tab-active] a svg path { fill: #f6f2ea; }
+        .tab-nav__list li[data-tab-active] a::before {
+            color: var(--color-2-300);
+        }
+        .tab-nav__list li[data-tab-active] a svg path { fill: var(--color-2-200); }
 
-        /* menu rows */
-        .menu-list__item:nth-child(odd) { background-color: var(--color-1-50); }
-        .menu-list__item-price { color: var(--color-2-700); }
+        /* category label — italic serif, terracotta, with a longer rule */
+        .menu-block__cat-name {
+            font-family: var(--type-2, Georgia, serif);
+            font-style: italic;
+            font-weight: 400;
+            color: var(--color-2-700);
+            letter-spacing: 0.02em;
+            text-transform: none;
+            font-size: var(--text-md);
+            padding-left: var(--vspace-1_5);
+        }
+        .menu-block__cat-name::before {
+            width: var(--vspace-1);
+            background-color: var(--color-2-500);
+            height: 1.5px;
+        }
+
+        /* menu rows — warm cream alternation, subtle hover lift */
+        .menu-list__item {
+            transition: background-color 0.25s ease, transform 0.25s ease;
+        }
+        .menu-list__item:nth-child(odd) {
+            background-color: #f1e8d6;
+        }
+        .menu-list__item:nth-child(even) {
+            background-color: #faf5ec;
+        }
+        .menu-list__item:hover {
+            background-color: #ebddc4;
+        }
+
+        /* dish title — deep espresso for strong hierarchy */
+        .menu-list__item h4 {
+            color: #2a1813;
+            font-weight: 500;
+            letter-spacing: 0.005em;
+        }
+        .menu-list__item p { color: #7a5c4a; }
+
+        /* price — warm terracotta, slightly larger & refined */
+        .menu-list__item-price {
+            color: var(--color-2-700);
+            font-family: var(--type-2, Georgia, serif);
+            font-weight: 500;
+            font-size: 1.15em;
+            letter-spacing: 0.01em;
+            white-space: nowrap;
+        }
+        .menu-list__item-price span {
+            color: var(--color-2-500);
+            font-weight: 400;
+        }
 
         /* intro social strip */
         .intro-block-content__social a {
